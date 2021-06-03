@@ -31,6 +31,7 @@ public final class Spanko extends JavaPlugin implements Listener {
 
     private int sleeping(Player player) {
         List<Player> sleeping = player.getWorld().getPlayers().stream().filter(player1 -> player.getPose() == Pose.SLEEPING).collect(Collectors.toList());
+        // I stole this code from https://github.com/nkomarn/Harbor/blob/f27335e2420a331100978efe96d6b3257353a578/src/main/java/xyz/nkomarn/harbor/task/Checker.java#L160
         return sleeping.size();
     }
 
@@ -89,7 +90,7 @@ public final class Spanko extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onSleep(PlayerBedEnterEvent event) {
-        if (event.getBedEnterResult() != PlayerBedEnterEvent.BedEnterResult.OK)
+        if (event.getBedEnterResult() != PlayerBedEnterEvent.BedEnterResult.OK) // I stole this code from https://github.com/nkomarn/Harbor/blob/f27335e2420a331100978efe96d6b3257353a578/src/main/java/xyz/nkomarn/harbor/listener/BedListener.java#L31
             return;
 
         Player player = event.getPlayer();
