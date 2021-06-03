@@ -1,0 +1,5 @@
+name: Spanko
+version: 1.0
+main: me.migoyam.spanko.Spanko
+api-version: 1.16
+authors: [ MiGoYAm ]

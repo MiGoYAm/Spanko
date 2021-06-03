@@ -1,0 +1,5 @@
+name: Spanko
+version: ${project.version}
+main: me.migoyam.spanko.Spanko
+api-version: 1.16
+authors: [ MiGoYAm ]
