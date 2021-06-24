@@ -38,7 +38,7 @@ public final class Spanko extends JavaPlugin implements Listener {
         if (sleeping == 0)
             nightBar.setVisible(false);
         if (required > sleeping && player.getWorld().getTime() != 0 && task != null)
-            getServer().getScheduler().cancelTask(task.getTaskId());
+            task.cancel();
     }
     @Override
     public void onEnable() {
